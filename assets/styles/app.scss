@@ -1,1 +1,11 @@
 @import "~bootstrap/scss/bootstrap";
+@import 'style.css';
+@import 'style.min.css';
+
+.menu-fixed {
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.footer-bg {
+  background-color: #00b88e;
+}
