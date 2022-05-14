@@ -1,0 +1,20 @@
+{% macro show(listname, listurls, listfonticons = []) %}
+    <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+        {% for key,value in listname %}
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="{{ url(listurls[key]) }}">
+                    {% if listfonticons[key] != '' %}
+                        <span class="{{ listfonticons[key] }} mr-2"></span> <span itemprop="name">{{ value }}</span>
+                    {% else %}
+                        <span itemprop="name">{{ value }}</span>
+                    {% endif %}
+                </a>
+                {% if key < listname|length - 1 %}
+                    &nbsp;<i class="fa fa-angle-right"></i>
+                    </a>
+                {% endif %}
+                <meta itemprop="position" content="{{ key + 1 }}"/>
+            </li>
+        {% endfor %}
+    </ol>
+{% endmacro %}
