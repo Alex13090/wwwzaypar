@@ -20,15 +20,18 @@
                 </div>
             </div>
 
-            <div class="row mt-5 mb-5">
-                <div class="col-md-3"></div>
-                <div class="col-md-6 col-md-offset-6">
-                    {{ app.user.userIdentifier }}
+            <section class="container mt-5">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 mt-5 p-5 mb-5 shadow bg-white rounded">
+                        <h1 class="mb-5">Votre profile</h1>
+                        {{ app.user.userIdentifier }}
+                    </div>
                 </div>
-                <div class="col-md-3 mt-5">
-                    <a href="{{ path('app_logout') }}">Me déconnecter</a>
+                <div class="mt-5 d-flex justify-content-end">
+                    <a href="{{ path('app_logout') }}" class="btn btn-outline-success">Me déconnecter</a>
                 </div>
-            </div>
+            </section>
         </div>
+    </div>
     </div>
 {% endblock %}

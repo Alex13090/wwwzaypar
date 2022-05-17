@@ -1,32 +1,52 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Inscription{% endblock %}
+{% import 'block/breadcrumb.html.twig' as breadcrumb %}
+{% set listfonticons = ['fa fa-home', '', '', ''] %}
+{% set listname = ['Epicerie asiatique', 'inscription'] %}
+{% set listurls = ['home', 'app_register'] %}
+
+{% set description = "Créer votre compte client" %}
+{% set keywords = "" %}
+
+{% block description %}{{ description }}{% endblock %}
+{% block keywords %}{{ keywords }}{% endblock %}
+
 
 {% block body %}
-    <section class="container mt-5">
-        <div class="row">
-            <div class="col-md-6 col-sm-12 col-xs-12 mt-5 p-5 mb-5 shadow bg-white rounded ms-auto">
-                <h1 class="mb-5">Inscription</h1>
-                {{ form_start(registrationForm) }}
-                {{ form_row(registrationForm.lastname) }}
-                {{ form_row(registrationForm.firstname) }}
-                {{ form_row(registrationForm.email) }}
-                {{ form_row(registrationForm.phone) }}
-                {{ form_row(registrationForm.address) }}
-                {{ form_row(registrationForm.zipcode) }}
-                {{ form_row(registrationForm.city) }}
-                {{ form_row(registrationForm.plainPassword, {
-                    label: 'Password'
-                }) }}
-                {{ form_row(registrationForm.RGPDConsent) }}
-
-                <button type="submit" class="btn btn-success my-3">M'inscrire</button>
-                <div class="d-flex justify-content-between">
-                    <p class="mt-3">Vous avez déjà un compte?</p>
-                    <a href="{{ path('app_login') }}" class="btn btn-outline-success">Me connecter</a>
+    <div class="page-content-wrapper">
+        <div class="page-content container">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    {{ breadcrumb.show(listname, listurls, listfonticons) }}
                 </div>
-                {{ form_end(registrationForm) }}
             </div>
+            <section class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-8 col-sm-12 col-xs-12 mt-5 p-5 mb-5 shadow bg-white rounded ms-auto">
+                        <h1 class="mb-5">Inscription</h1>
+                        {{ form_start(registrationForm) }}
+                        {{ form_row(registrationForm.lastname) }}
+                        {{ form_row(registrationForm.firstname) }}
+                        {{ form_row(registrationForm.email) }}
+                        {{ form_row(registrationForm.phone) }}
+                        {{ form_row(registrationForm.address) }}
+                        {{ form_row(registrationForm.zipcode) }}
+                        {{ form_row(registrationForm.city) }}
+                        {{ form_row(registrationForm.plainPassword, {
+                            label: 'Password'
+                        }) }}
+                        {{ form_row(registrationForm.RGPDConsent) }}
+
+                        <button type="submit" class="btn btn-success my-3">M'inscrire</button>
+                        <div class="d-flex justify-content-between">
+                            <p>Vous avez déjà un compte?</p>
+                            <a href="{{ path('app_login') }}" class="btn btn-outline-success">Me connecter</a>
+                        </div>
+                        {{ form_end(registrationForm) }}
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
+    </div>
 {% endblock %}
