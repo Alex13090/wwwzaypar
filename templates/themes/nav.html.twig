@@ -3,11 +3,11 @@
         <div class="row py-2 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-dark" href="">FAQs</a>
+                    <a class="text-dark text-decoration-none" href="">FAQs</a>
                     <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="">Aide?</a>
+                    <a class="text-dark text-decoration-none" href="">Besoins d'aide?</a>
                     <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="">Contacter nous</a>
+                    <a class="text-dark text-decoration-none" href="">Contacter nous</a>
                 </div>
             </div>
             <div class="col-lg-6 text-lg-right">
@@ -104,38 +104,47 @@
             </div>
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0 px-0">
-                    <a href="" class="text-decoration-none d-block d-lg-none">
+                    <a href="{{ path('home') }}" class="text-decoration-none d-block d-lg-none navbar-brand">
                         <h1 class="m-0 display-5 font-weight-semi-bold"><span
                                     class="text-primary font-weight-bold border px-3 mr-1">Z</span>Zaypar</h1>
                     </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                        <div class="navbar-nav mr-auto py-0">
-                            <a href="{{ path('home') }}" class="nav-item nav-link text-dark"><i class="fab fa-home"></i></a>
-                            <a href="#" class="nav-item nav-link text-dark">Boutique</a>
-                            <a href="#" class="nav-item nav-link text-dark">Nouveauté</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle text-dark" data-toggle="dropdown">En
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto py-0">
+                            <li class="nav-item">
+                                <a href="{{ path('home') }}" class="nav-link text-dark"><i
+                                            class="fab fa-home"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-dark">Boutique</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-dark">Nouveauté</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">En
                                     gros</a>
-                                <div class="dropdown-menu rounded-0 m-0">
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a href="#" class="dropdown-item text-dark">Professionel</a>
                                     <a href="#" class="dropdown-item text-dark">Particulier</a>
                                 </div>
-                            </div>
-                            <a href="#" class="nav-item nav-link active text-dark">Meilleure vente</a>
-                        </div>
-                        <div class="navbar-nav ml-auto py-0">
-                            <div class="nav-item dropdown">
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-dark">Meilleure vente</a>
+                            </li>
+
+                            <li class="nav-item">
                                 {% if app.user %}
-                                    <a href="{{ path('app_profil') }}" class="nav-link">Mon compte</a>
+                                    <a href="{{ path('app_profil') }}" class="nav-link text-dark">Mon compte</a>
                                 {% else %}
-                                    <a href="{{ path('app_login') }}" class="nav-link">Mon compte</a>
-                                {%  endif %}
-                                </div>
-                            </div>
-                        </div>
+                                    <a href="{{ path('app_login') }}" class="nav-link text-dark">Mon compte</a>
+                                {% endif %}
+                            </li>
+                        </ul>
                     </div>
                 </nav>
             </div>
