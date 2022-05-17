@@ -17,6 +17,6 @@ class HomeController extends AbstractController
     #[Route(path: 'espace-client', name: 'app_profil')]
     public function profil()
     {
-        return $this->render('user/profil.html.twig');
+        return $this->render('user/profile.html.twig');
     }
 }

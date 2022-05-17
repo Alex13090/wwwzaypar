@@ -33,14 +33,14 @@
     <div class="row align-items-center py-3 px-xl-5">
         <div class="col-lg-3 d-none d-lg-block">
             <a href="{{ path('home') }}" class="text-decoration-none">
-                <h1 class="m-0 display-5 font-weight-semi-bold"><span
-                            class="font-weight-bold border px-3 mr-1 logo-color">Z</span>Zaypar</h1>
+                <h1 class="m-0 display-5 font-weight-semi-bold">
+                    <span class="font-weight-bold border px-3 mr-1 logo-color">Z</span>Zaypar</h1>
             </a>
         </div>
         <div class="col-lg-6 col-6 text-left">
             <form action="">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Nom du produit">
+                    <input type="text" class="form-control" placeholder="nom du produit">
                     <div class="input-group-append">
                             <span class="input-group-text bg-transparent text-primary">
                                 <i class="bi bi-search text-success"></i>
@@ -136,8 +136,7 @@
                             <li class="nav-item">
                                 <a href="#" class="nav-link text-dark">Meilleure vente</a>
                             </li>
-
-                            <li class="nav-item">
+                            <li class="nav-item ml-auto">
                                 {% if app.user %}
                                     <a href="{{ path('app_profil') }}" class="nav-link text-dark">Mon compte</a>
                                 {% else %}
