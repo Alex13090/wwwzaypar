@@ -10,7 +10,7 @@
                     <a class="text-dark text-decoration-none" href="">Contacter nous</a>
                 </div>
             </div>
-            <div class="col-lg-6 text-lg-right">
+            <div class="col-lg-6 d-flex justify-content-end">
                 <div class="d-inline-flex align-items-center">
                     <a class="text-dark px-2" href="">
                         <i class="bi bi-facebook"></i>
@@ -21,8 +21,8 @@
                     <a class="text-dark px-2" href="">
                         <i class="bi bi-instagram"></i>
                     </a>
-                    <a class="text-dark pl-2" href="">
-                        <i class="bi bi-youtube"></i>
+                    <a class="text-dark px-2" href="">
+                        <i class="bi bi-google"></i>
                     </a>
                 </div>
             </div>
@@ -33,7 +33,7 @@
     <div class="row align-items-center py-3 px-xl-5">
         <div class="col-lg-3 d-none d-lg-block">
             <a href="{{ path('home') }}" class="text-decoration-none">
-                <h1 class="m-0 display-5 font-weight-semi-bold">
+                <h1 class="m-0 display-5 font-weight-semi-bold text-dark">
                     <span class="font-weight-bold border px-3 mr-1 logo-color">Z</span>Zaypar</h1>
             </a>
         </div>
@@ -49,7 +49,7 @@
                 </div>
             </form>
         </div>
-        <div class="col-lg-3 col-6 text-right">
+        <div class="col-lg-3 col-6 d-flex justify-content-end">
             <a href="" class="btn border">
                 <i class="bi bi-heart text-success"></i>
                 <span class="badge">0</span>
@@ -69,10 +69,10 @@
     <div class="container">
         <div class="row px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
-                <a class="btn d-flex align-items-center justify-content-between text-white w-100"
+                <a class="btn d-flex align-items-center justify-content-between text-white w-100 my-1"
                    data-toggle="collapse" href="#navbar-vertical"
                    style="height: 65px; margin-top: -1px; padding: 0 30px;">
-                    <h6 class="m-0 text-white">Catégories</h6>
+                    <h6 class="text-white">Catégories</h6>
                     <i class="bi bi-caret-down-fill text-dark"></i>
                 </a>
                 <nav class="collapse position-absolute navbar navbar-vertical align-items-start p-0 border border-top-0 border-bottom-0"
@@ -103,7 +103,7 @@
                 </nav>
             </div>
             <div class="col-lg-9">
-                <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0 px-0">
+                <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0 px-0 my-3">
                     <a href="{{ path('home') }}" class="text-decoration-none d-block d-lg-none navbar-brand">
                         <h1 class="m-0 display-5 font-weight-semi-bold"><span
                                     class="text-primary font-weight-bold border px-3 mr-1">Z</span>Zaypar</h1>
@@ -115,28 +115,28 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto py-0">
-                            <li class="nav-item">
+                            <li class="nav-item px-2">
                                 <a href="{{ path('home') }}" class="nav-link text-dark"><i
-                                            class="fab fa-home"></i></a>
+                                            class="bi bi-house-door-fill"></i></a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item px-2">
                                 <a href="#" class="nav-link text-dark">Boutique</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item px-2">
                                 <a href="#" class="nav-link text-dark">Nouveauté</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">En
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">En
                                     gros</a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a href="#" class="dropdown-item text-dark">Professionel</a>
                                     <a href="#" class="dropdown-item text-dark">Particulier</a>
                                 </div>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item px-2">
                                 <a href="#" class="nav-link text-dark">Meilleure vente</a>
                             </li>
-                            <li class="nav-item ml-auto">
+                            <li class="nav-item ml-auto px-2">
                                 {% if app.user %}
                                     <a href="{{ path('app_profil') }}" class="nav-link text-dark">Mon compte</a>
                                 {% else %}
